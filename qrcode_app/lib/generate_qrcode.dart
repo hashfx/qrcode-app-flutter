@@ -16,6 +16,19 @@ class _GenerateQrCodeState extends State<GenerateQrCode> {
         title: const Text("FluttQR"),
         centerTitle: true,
       ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            margin: const EdgeInsets.all(20),
+            child: TextField(
+              controller: controller,
+              decoration: const InputDecoration(
+                  border: OutlineInputBorder(), labelText: 'Enter URL for QR'),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
